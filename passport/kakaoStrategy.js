@@ -11,7 +11,7 @@ module.exports = () => {
         console.log('kakao profile', profile);
         try{
             const exUser = await User.findOne({
-                where : {snsId: profile.id, provider: 'kakao'},
+                where : {snsId : profile.id, provider: 'kakao'},
             });
             if(exUser){
                 done(null, exUser);
